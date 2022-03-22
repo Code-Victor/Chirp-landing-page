@@ -36,7 +36,7 @@ nav ul{
     flex: 2;
 
 }
-.hero-image img{
+.hero-image img,source{
     max-width: 100%;
     min-width: 350px;
 }
@@ -141,6 +141,8 @@ nav ul{
     border-radius: 5px;
     padding: 24px;
     height: fit-content;
+    display: flex;
+    flex-direction: column;
 }
 .card-head{
     display: flex;
@@ -183,6 +185,7 @@ nav ul{
     justify-content: space-between;
     font-weight: 600px;
     color:#828281;
+    margin-top: auto;
 }
 .hearts{
     display: flex;
@@ -275,29 +278,53 @@ ul{
         flex-direction: column;
         gap:10px
     }
+    .hero-content h1{
+        font-size: 28px;
+        line-height: 35px;
+    }
     .hero-image{
         flex: 0;
         order: 1;
         
         
     }
-    .hero-image img{
-        height:auto;
-        max-height: 500px;
-        width: auto;
+    .hero-image picture{
+        
+        max-width: 100%;
+       
     }
     .hero-content{
         flex: 0;
         order: 2;
     }
-    .testimonials .grid-cols-3{
-        grid-template-columns: repeat(2,1fr);
+    .md\:grid-cols-2{
+        grid-template-columns: repeat(2,1fr) !important;
         justify-content: center;
+    }
+    .testimonials .md\:grid-cols-2 .testimony-card{
+        height: 100%;
+    }
+    .testimonials .md\:grid-cols-2 .testimony-card:last-of-type{
+       grid-column: span 2;
     }
     /* Features Section */
     /* .feature{
         padding: 20px 0;
     } */
+    
+}
+
+@media screen and (max-width:560px){
+    .sm\:grid-cols-1{
+        grid-template-columns: repeat(1,1fr) !important;
+        justify-content: center;
+    }
+    .sm\:grid-cols-1 .testimony-card{
+        grid-column: span 1 !important;
+    }
+    .sm\:none{
+        display: none;
+    }
     
 }
 /* Utilities */
