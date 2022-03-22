@@ -11,7 +11,7 @@
     <header>
       <nav class="container">
         <h1 class="logo">Chirp.</h1>
-        <ul>
+        <ul class="sm:none">
           <li>Home</li>
           <li>Price</li>
           <li>FAQ</li>
@@ -73,10 +73,12 @@
           </div>
         </div>
         <div class="hero-image">
-          <picture>
+          <picture >
+            <source srcset="Assets\Hero-Image-(Desktop-View).png"
+                    media="(max-width: 560px)">
             <source srcset="./Assets/Hero-Image-(Tablet-View).png"
                     media="(max-width: 768px)">
-            <img src="/Assets/Hero Image (Desktop View).png" alt="" />
+            <img src="Assets\Hero-Image-(Desktop-View).png" alt="" />
         </picture>
         </div>
       </section>
@@ -84,7 +86,7 @@
     <main class="">
       <section class="features container">
         <h1 class="headText">Features that help you Tweet Smarter.</h1>
-        <div class="grid grid-cols-2">
+        <div class="grid grid-cols-2 sm:grid-cols-1">
           <div class="feature">
             <div class="featureHead">Analytics</div>
             <div class="featureBody">
@@ -122,7 +124,7 @@
       <section class="testimonials">
         <div class="container">
             <h1 class="headText ">What our customers say</h1>
-            <div class="grid grid-cols-3 ">
+            <div class="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
                 <div class="testimony-card">
                     <div class="card-head">
                         <img src="./Assets/userAvatar01.svg" alt="user1">
