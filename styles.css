@@ -37,7 +37,7 @@ nav {
 }
 .nav-hamburger.nav-hamburger-active > *:nth-child(2) {
   opacity: 0;
-  width: 0%;
+  width: 00%;
 }
 .nav-hamburger.nav-hamburger-active > *:nth-child(1) {
   transform: rotate(40deg) translateY(10px);
